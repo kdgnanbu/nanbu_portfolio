@@ -669,6 +669,8 @@
       height: 200px;
       object-fit: cover;
       display: block;
+      border: 2px solid rgb(255, 211, 13);
+      border-radius: 16px;
     }
     .skill-all {
       margin-top: 45px;
@@ -982,4 +984,5 @@
       width: 100%;
       margin: 0;
       margin-bottom: 15px;
+
     }
