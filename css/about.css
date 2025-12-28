@@ -1,0 +1,376 @@
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #e0f7ff, #a0d8ef);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    header {
+      position: relative;
+      height: 13vh;
+      background: radial-gradient(circle at center, #a0d8ef 0%, #004466 80%);
+      color: white;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .header-top {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10;
+    }
+
+    .logo {
+      height: 50px;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 1.2rem;
+      list-style: none;
+    }
+
+        .header-top ul li a {
+      position: relative;
+      display: inline-block;
+      padding: 0 15px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      border-right: 1px solid white;
+      transition: all 0.3s ease;
+    }
+
+      .header-top ul li a::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+      height: 2px;
+      background: white;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .header-top ul li a:hover::after {
+      opacity: 1;
+    }
+        .header-top ul li:last-child a {
+      border-right: none;
+    }
+
+    /* ハンバーガーアイコン */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      width: 30px;
+      height: 25px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 100;
+    }
+
+    .hamburger span {
+      display: block;
+      height: 3px;
+      background: white;
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+
+
+
+
+
+
+
+    main {
+      max-width: 960px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: #f0faffcc;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 85, 120, 0.15);
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #005577;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      text-align: center;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .sea-button {
+      display: inline-block;
+      background: linear-gradient(135deg, #4db6ff, #0077cc);
+      color: white;
+      padding: 0.8em 1.6em;
+      font-weight: 600;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      margin: 1.5rem auto;
+      display: block;
+      width: max-content;
+    }
+
+    .sea-button:hover {
+      background: linear-gradient(135deg, #80caff, #005f99);
+      transform: translateY(-3px);
+    }
+
+
+
+#about {
+      margin-top: 100px;
+    }
+
+    #about p {
+      text-align: left;
+      max-width: 600px;
+      margin: 0 auto 1rem;
+    }
+
+    .about-text {
+      margin-top: 50px;
+    }
+
+    /* .fish-icons,
+    .fish-icons-2 {
+      display: flex;
+      list-style: none;
+      justify-content: center;
+      gap: 1.5rem;
+      font-size: 2.2rem;
+      color: #3399ff;
+    }
+
+    .fish-icons {
+      animation: swim 4s ease-in-out infinite alternate;
+    } */
+
+    /* @keyframes swim {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(40px);
+      }
+    }
+
+    .fish-icons-2 {
+      margin-top: 10px;
+      animation: swim2 4s ease-in-out infinite alternate;
+    }
+
+    @keyframes swim2 {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-40px);
+      }
+    } */
+/* 
+    #works {
+      margin-top: 30px;
+    } */
+
+    .sea-button {
+      display: inline-block;
+      background: linear-gradient(135deg, #4db6ff, #0077cc);
+      color: white;
+      padding: 0.8em 1.6em;
+      font-weight: 600;
+      border-radius: 30px;
+      box-shadow: 0 6px 10px rgba(0, 119, 204, 0.5);
+      text-decoration: none;
+      transition: all 0.3s ease;
+      margin: 1rem auto;
+      margin-top: 40px;
+      display: block;
+      width: max-content;
+    }
+
+    .sea-button:hover {
+      background: linear-gradient(135deg, #80caff, #005f99);
+      box-shadow: 0 10px 20px rgba(0, 95, 153, 0.7);
+      transform: translateY(-3px);
+    }
+
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 6px solid #66c2ff;
+      object-fit: cover;
+      box-shadow: 0 0 15px #66c2ff88;
+      margin: 0 auto 1rem;
+      display: block;
+      background: radial-gradient(circle, #cceeff, #66c2ff44);
+    }
+/* 
+    .works-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .work-item {
+      background: #d4f1ffdd;
+      border-radius: 12px;
+      padding: 1rem;
+      box-shadow: 0 5px 15px #99ccff55;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .work-item:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px #66b2ffaa;
+    }
+
+    .work-img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 0.8rem;
+      box-shadow: 0 3px 8px #99ccff88;
+    }
+
+    .work-title {
+      font-weight: 600;
+      color: #005577;
+      margin-bottom: 0.4rem;
+    }
+
+    .work-desc {
+      font-size: 0.9rem;
+      color: #0077aa;
+      line-height: 1.3;
+    }
+
+
+
+
+ */
+
+
+
+
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.85rem;
+      color: #004466;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        @media (max-width: 768px) {
+      .hero-text h1 {
+        font-size: 2rem;
+      }
+
+      .hero-text p {
+        font-size: 1rem;
+      }
+
+      main {
+        margin: -60px 1rem 2rem 1rem;
+        padding: 1.5rem;
+      }
+
+      .fish-icons {
+        font-size: 1.5rem;
+      }
+
+      .fish-icons-2 {
+        font-size: 1.5rem;
+      }
+
+      .sea-button {
+        padding: 0.6em 1.2em;
+      }
+
+      .logo {
+        height: 40px;
+      }
+
+      .profile-img {
+        width: 120px;
+        height: 120px;
+      }
+
+      .work-img {
+        height: 120px;
+      }
+    }
+        /* Responsive */
+    @media (max-width: 768px) {
+      .hamburger {
+        display: flex;
+      }
+      .header-top ul li a{
+        border-right: none;
+      }
+      .nav-menu {
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: #005577;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        display: none;
+        border-right: none;
+      }
+      .nav-menu.active {
+        display: flex;
+      }
+    }
+  
